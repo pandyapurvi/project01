@@ -11,3 +11,10 @@
   <li>Comment: <%= @review.comment %></li>
   <li>Rating: <%= @car.rating %></li>
 </ul>
+
+<div class="controls">
+  <% if @current_user.admin? %>
+  <%= link_to 'Edit Brand', edit_review_path(@review.id) %>
+  <%= link_to 'Delete Brand', review_path(@review.id), :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  <% end %>
+</div>
