@@ -10,3 +10,9 @@
 <%= f.select :car_id, Car.pluck(:name,:id), :include_blank => true %>
 <%= f.submit %>
 <% end %>
+<div class="controls">
+  <% if @current_user.admin? %>
+  <%= link_to 'Edit Brand', reviews_path(@review.id) %>
+  <%= link_to 'Delete Brand', reviews_path(@review.id), :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  <% end %>
+</div>

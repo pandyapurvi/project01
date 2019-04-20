@@ -13,6 +13,8 @@
 <% end %>
 
 <div class="controls">
+  <% if @current_user.admin? %>
   <%= link_to 'Edit Brand', edit_brand_path(@brand.id) %>
-  <%= link_to 'Delete Brand', brand_path(@brand.id), :method => 'delete' %>
+  <%= link_to 'Delete Brand', brand_path(@brand.id), :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  <% end %>
 </div>
