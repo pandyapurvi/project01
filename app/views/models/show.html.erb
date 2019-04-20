@@ -11,6 +11,8 @@
 <% end %>
 
 <div class="controls">
+  <% if @current_user.admin? %>
   <%= link_to 'Edit Model', edit_model_path(@model.id) %>
-  <%= link_to 'Delete Model', model_path(@model.id), :method => 'delete', :data => {:confirm => 'are you sure?'} %>
+  <%= link_to 'Delete Model', model_path(@model.id), :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  <% end %>
 </div>

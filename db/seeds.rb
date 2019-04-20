@@ -63,3 +63,7 @@ c10.reviews << r1 << r2
 #REvies and Users
 u1.reviews << r1 << r2 << r3 << r4 << r5
 u2.reviews << r1 << r2 << r3 << r4 << r5
+
+#models and users Associations
+u1.models << m1 << m2 << m3 << m4
+u2.models << m1 << m2 << m3 << m4

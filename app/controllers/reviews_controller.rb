@@ -17,6 +17,7 @@ end
     redirect_to reviews_path
   end
 
+
   private
   def review_params
     params.require(:review).permit(:username,:comment,:rating,:car_id,:user_id)

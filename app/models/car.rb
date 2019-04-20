@@ -17,4 +17,5 @@ class Car < ApplicationRecord
   belongs_to :brand, :optional => true
   belongs_to :model, :optional => true
   has_many :reviews
+  has_and_belongs_to_many :users
 end

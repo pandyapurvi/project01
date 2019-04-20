@@ -19,9 +19,11 @@
   <p><%= link_to r.comment, reviews_path(@car) %></p>
   <% end %>
   <% end %>
-
 </ul>
+
 <div class="controls">
-  <%= link_to 'Edit car', edit_car_path(@car.id) %>
-  <%= link_to 'Delete car', @car, :method =>'delete', :data => {:confirm => 'Are you sure?'} %>
+  <% if @current_user.admin? %>
+  <%= link_to 'Edit Car', edit_car_path(@car.id) %>
+  <%= link_to 'Delete Car', car_path(@car.id), :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+  <% end %>
 </div>

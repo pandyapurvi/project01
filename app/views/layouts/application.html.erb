@@ -31,15 +31,7 @@
     <%= link_to 'MODELS', models_path%>
     <%= link_to 'CARS', cars_path %>
 </nav>
-<%= form_for @car do |f| %>
-<%= f.label :car %>
-<%= f.select :car_id %>
-<%= f.label :brand_id %>
-<%= f.select :brand_id, Brand.pluck(:name,:id), :include_blank => true %>
-<%= f.label :model_id %>
-<%= f.select :model_id, Model.pluck(:name,:id), :include_blank => true %>
-
-<% end %>
+<%= select_tag 'brand_id', Brand.pluck(:name,:id) %>
 
     <%= yield %>
   </body>

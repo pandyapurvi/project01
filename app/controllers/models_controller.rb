@@ -1,7 +1,7 @@
 class ModelsController < ApplicationController
 
   def index
-  
+
     @models = Model.all
   end
 
@@ -37,6 +37,6 @@ class ModelsController < ApplicationController
   private
   def model_params
     #strong parameters "whitelist of sanitize input (stuff that okay to put in the database)"
-    params.require(:model).permit(:name,:size, :drive,:image)
+    params.require(:model).permit(:name,:size,:drive,:image)
   end
   end

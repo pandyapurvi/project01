@@ -13,6 +13,8 @@
 class User < ApplicationRecord
   has_secure_password
   has_many :reviews
+  has_and_belongs_to_many :models
+  has_and_belongs_to_many :cars
   validates :email, :presence => true, :uniqueness => true #go to the rails guidelines to understand validation.
   # (cant create a User without an email and has to be unique in the db)
 end
