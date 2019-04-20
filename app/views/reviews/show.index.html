@@ -1,0 +1,13 @@
+<h1><%= @review.username %></h1>
+
+<ul>
+  <li>Name: <%= @review.username %></li>
+  <% if @review.car.present? %>
+  <li>Car: <%= link_to @review.car.name, car_path(@review.car) %></li>
+  <% end %>
+  <% if @review.user.present? %>
+  <li>User: <%= link_to @review.user.name, user_path(@review.user) %></li>
+  <% end %>
+  <li>Comment: <%= @review.comment %></li>
+  <li>Rating: <%= @car.rating %></li>
+</ul>

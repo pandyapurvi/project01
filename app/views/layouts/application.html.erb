@@ -10,6 +10,37 @@
   </head>
 
   <body>
+
+  <nav class="login">
+  <%= link_to 'Home', root_path %>
+  <% if @current_user.present? %>
+  <% if @current_user.admin? %>
+  <%= link_to "All user", users_path %>
+  <% end %>
+  <%= link_to "Sign Out, #{ @current_user.email}", login_path, :method => 'delete' %>
+  <% else %>
+  <%= link_to 'Sign Up', new_user_path %>
+  <%= link_to 'Sign In',login_path  %>
+  <% end  %>
+
+</nav>
+<br><br><br>
+<nav class="branch">
+
+    <%= link_to 'BRANDS', brands_path %>
+    <%= link_to 'MODELS', models_path%>
+    <%= link_to 'CARS', cars_path %>
+</nav>
+<%= form_for @car do |f| %>
+<%= f.label :car %>
+<%= f.select :car_id %>
+<%= f.label :brand_id %>
+<%= f.select :brand_id, Brand.pluck(:name,:id), :include_blank => true %>
+<%= f.label :model_id %>
+<%= f.select :model_id, Model.pluck(:name,:id), :include_blank => true %>
+
+<% end %>
+
     <%= yield %>
   </body>
 </html>

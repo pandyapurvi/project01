@@ -1,0 +1,16 @@
+<%= form_for @car do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :image %>
+<%= f.text_field :image %>
+<%= f.label :seat %>
+<%= f.number_field :seat %>
+<%= f.label :price %>
+<%= f.text_field :price %>
+<%= f.label :brand_id %>
+<%= f.select :brand_id, Brand.pluck(:name,:id), :include_blank => true %>
+<%= f.label :model_id %>
+<%= f.select :model_id, Model.pluck(:name,:id), :include_blank => true %>
+
+<%= f.submit %>
+<% end %>

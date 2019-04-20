@@ -1,0 +1,12 @@
+<%= form_for @model do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, :required => true, :autofocus => true %>
+<%= f.label :image %>
+<%= f.text_field :image %>
+<%= f.label :size %>
+<%= f.text_field :size %>
+<%= f.label :drive %>
+<%= f.text_field :drive %>
+
+<%= f.submit %>
+<% end %>

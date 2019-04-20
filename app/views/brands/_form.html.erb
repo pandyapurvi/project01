@@ -1,0 +1,7 @@
+<%= form_for @brand do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, :required => true, :autofocus => true %>
+<%= f.label :image %>
+<%= f.text_field :image %>
+<%= f.submit %>
+<% end %>

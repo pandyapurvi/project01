@@ -1,0 +1,27 @@
+<h1><%= @car.name %></h1>
+<%= image_tag @car.image, :alt => @car.name, :class => 'feature' %>
+
+<ul>
+  <li>Name: <%= @car.name %></li>
+  <% if @car.brand.present? %>
+  <li>Brand: <%= link_to @car.brand.name, brand_path(@car.brand) %></li>
+  <% end %>
+  <% if @car.model.present? %>
+  <li>Model: <%= link_to @car.model.name, model_path(@car.model) %></li>
+  <% end %>
+  <li>Seat: <%= @car.seat %></li>
+  <li>Price: <%= @car.price %></li>
+  <% if @car.reviews.present? %>
+  <h3>Reviews for this car</h3>
+  <% @car.reviews.each do |r| %>
+
+  <p>Rating: <%= link_to r.rating, reviews_path(@car) %> UserName: <%= link_to r.username, reviews_path(@car) %></p>
+  <p><%= link_to r.comment, reviews_path(@car) %></p>
+  <% end %>
+  <% end %>
+
+</ul>
+<div class="controls">
+  <%= link_to 'Edit car', edit_car_path(@car.id) %>
+  <%= link_to 'Delete car', @car, :method =>'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>

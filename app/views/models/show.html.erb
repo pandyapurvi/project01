@@ -1,0 +1,16 @@
+<h2><%= @model.name %></h2>
+
+<ul>
+  <li>Name: <%= @model.name %></li>
+
+</ul>
+
+<% @model.cars.each do |car| %>
+<%= link_to image_tag(car.image, :class =>'thumb'), car_path(car.id) %>
+<%= link_to car.name, car_path(car.id) %>
+<% end %>
+
+<div class="controls">
+  <%= link_to 'Edit Model', edit_model_path(@model.id) %>
+  <%= link_to 'Delete Model', model_path(@model.id), :method => 'delete', :data => {:confirm => 'are you sure?'} %>
+</div>

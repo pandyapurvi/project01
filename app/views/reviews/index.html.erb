@@ -1,0 +1,15 @@
+<h1>Reviews</h1>
+<% @reviews.each do |review| %>
+<ul>
+  <% if review.car.present? %>
+
+  <li>Car: <%= link_to review.car.name, car_path(review.car) %></li>
+
+  <% end %>
+</ul>
+  <p>Rating: <%= link_to review.rating, reviews_path(review.id) %></p>
+  <p>Name:  <%= link_to review.username, reviews_path(review.id) %></p>
+  <p>Comment: <%= link_to review.comment, reviews_path(review.id) %></p>
+
+
+<% end %>
