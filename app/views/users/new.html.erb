@@ -1,17 +1,26 @@
-<h1>Sign Up</h1>
+<!-- <h1>Sign Up</h1> -->
+<div class="sign">
+  <div class="message">
 <% if @user.errors.any? %>
   <ol>
     <% @user.errors.full_messages.each do |message| %>
       <li><%= message %></li>
       <% end %>
-            <% end %>
-</ol>
+      </ol>
+    <% end %>
+
+</div>
+
 <%= form_for @user do |f| %>
+<div class="text-box1">
 <%= f.label :email %>
-<%= f.email_field :email %>
+<%= f.email_field :email,:class=>"email",:placeholder => "email address"%>
 <%= f.label :password %>
-<%= f.password_field :password %>
+<%= f.password_field :password,:class=>"email",:placeholder => "Strong Password"%>
 <%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %>
-<%= f.submit "Sign Up" %>
+<%= f.password_field :password_confirmation,:class=>"email",:placeholder=>"Confirm Password" %>
+<%= f.submit "Sign Up", :class => "bttn btn-blue" %>
+</div>
 <% end %>
+
+</div>

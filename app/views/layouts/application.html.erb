@@ -12,26 +12,38 @@
   <body>
 
   <nav class="login">
+    <header class="header">
+
   <%= link_to 'Home', root_path %>
+
   <% if @current_user.present? %>
   <% if @current_user.admin? %>
   <%= link_to "All user", users_path %>
   <% end %>
   <%= link_to "Sign Out, #{ @current_user.email}", login_path, :method => 'delete' %>
+  <%= link_to 'BRANDS', brands_path %>
+  <%= link_to 'MODELS', models_path%>
+  <%= link_to 'CARS', cars_path %>
+  </header>
   <% else %>
-  <%= link_to 'Sign Up', new_user_path %>
-  <%= link_to 'Sign In',login_path  %>
+  <div class="home">
+           <div class="logo-box">
+               <img src="/app/assets/images/logo.png" alt="logo" class="logo">
+           </div>
+           <div class="text-box">
+           <h1 class="heading-primary">
+               <span class="heading-primary-main">CarSales</span>
+               <span class="heading-primary-sub">Find your next car</span>
+           </h1>
+           <%= link_to 'Sign Up', new_user_path, :class => "btn btn-white btn-animation" %>
+             <%= link_to 'Sign In',login_path, :class => "btn btn-white btn-animation"  %>
+           </div>
+       </div>
+
   <% end  %>
 
 </nav>
-<br><br><br>
-<nav class="branch">
 
-    <%= link_to 'BRANDS', brands_path %>
-    <%= link_to 'MODELS', models_path%>
-    <%= link_to 'CARS', cars_path %>
-</nav>
-<%= select_tag 'brand_id', Brand.pluck(:name,:id) %>
 
     <%= yield %>
   </body>

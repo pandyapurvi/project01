@@ -1,6 +1,241 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-weight: 400;
+   font-size: 16px;
+   line-height: 1.7;
+   color: #777;
+   padding: 30px;
+}
+
+.home{
+  height: 140vh;
+  width: 95vw;
+  background-image:linear-gradient(to right bottom,rgba(0, 0, 0, 0.804), rgba(153, 153, 153, 0.6)) ,url('https://kasanovaonline.com/wp-content/uploads/2016/09/Lexus_LF_LC_Blue_001.jpg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  // clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+}
+
+.logo-box {
+   position: absolute;
+   top: 40px;
+   left: 40px;
+}
+
+.logo{
+  height: 35px;
+}
+.logo:hover {
+  animation: moveInRight 1s ease-out;
+}
+
+.text-box{
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+
+}
+.heading-primary{
+color: #fff;
+text-transform: uppercase;
+
+backface-visibility: hidden;
+margin-bottom: 20px;
+}
+.heading-primary-main{
+display: block;
+font-size: 60px;
+font-weight: 400;
+letter-spacing: 35px;
+
+animation-name: moveInLeft;
+animation-duration: 5s;
+animation-timing-function: ease-out;
+/* animation-iteration-count: 3; */
+/* animation-delay: 3s; */
+}
+.heading-primary-sub{
+display: block;
+font-size: 20px;
+font-weight: 700;
+letter-spacing: 17.4px;
+animation-name: moveInRight;
+animation-duration: 5s;
+animation-timing-function: ease-out;
+}
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    80%{
+        transform: translate(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    80%{
+        transform: translate(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255,255,255,.6);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(255,255,255,.6);
+}
+.btn::after{
+  content: "";
+  display: inline-block;
+  height:100%;
+  width:100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn::after{
+  background-color: #fff;
+}
+.btn:hover::after{
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+@keyframes moveInButton{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.btn-animation{
+  animation: moveInButton .5s ease-out 3s;
+  // animation-fill-mode: backwards;
+}
+
+// .header {
+//   background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/55/82/86579d751e8a73c.jpg');
+//   background-size: cover;
+//   height: 95vh;
+//   background-position: top;
+//   // clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+// }
 .thumb {
   max-height: 10em;
+}
+
+.sign {
+  postion: relative;
+  // max-width: 500px;
+  color: black;
+  text-align: center;
+  display: block;
+  margin-top: 20vh;
+
+}
+.text-box1 {
+  position: absolute;
+  // background-color: rgba(107, 178, 152, 0.6);
+  // margin: 0 auto;
+  left:50%;
+  top: 100%;
+  transform: translate(-50% ,-50%);
+  text-align: center;
+  // margin-top: 20px;
+  display: block;
+  color: orange;
+  font-size: 19px;
+}
+.message {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  background-color: red;
+  color: #fff;
+
+}
+.email{
+  display: block;
+  text-align: center;
+  position:relative;
+  width: 30vw;
+  padding: 5px;
+  font-size: 17px;
+}
+.btn-blue{
+  background-color: orange;
+  padding: 15px 40px;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  border: orange;
+}
+.bttn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(227,161,59,.6);
+}
+.bttn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(227,161,59,.6);
+}
+
+.sign_in{
+  display: block;
+  width: 30vw;
 }

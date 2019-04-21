@@ -1,17 +1,4 @@
-<h1>Sign Up</h1>
-<% if @user.error.any? %>
-  <ol>
-    <% @user.error.full_messages.each do |message| %>
-    <li><%= message %></li>
-    <% end %>
-  </ol>
-<% end  %>
-<%= form_for @user do |f| %>
-<%= f.label :email %>
-<%= f.email_field :email %>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %>
-<%= f.submit "Sign Up!" %>
-<% end  %>
+<h1>All Users</h1>
+<% @users.each do |user| %>
+  <p><%= user.email %></p>
+<% end %>
