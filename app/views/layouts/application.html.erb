@@ -13,18 +13,20 @@
 
   <nav class="login">
     <header class="header">
-
+  <div class="welcome">
   <%= link_to 'Home', root_path %>
 
   <% if @current_user.present? %>
   <% if @current_user.admin? %>
   <%= link_to "All user", users_path %>
   <% end %>
-  <%= link_to "Sign Out, #{ @current_user.email}", login_path, :method => 'delete' %>
-  <%= link_to 'BRANDS', brands_path %>
-  <%= link_to 'MODELS', models_path%>
-  <%= link_to 'CARS', cars_path %>
+  <%= link_to "Sign Out, #{ @current_user.email}", login_path, :method => 'delete', :class => "link btn-blue" %>
+  <%= link_to 'BRANDS', brands_path, :class => "link btn-blue" %>
+  <%= link_to 'MODELS', models_path, :class => "link btn-blue"%>
+  <%= link_to 'CARS', cars_path, :class => "link btn-blue" %>
+  </div>
   </header>
+
   <% else %>
   <div class="home">
            <div class="logo-box">

@@ -1,9 +1,15 @@
+
 <h1>Brands</h1>
+<div class="brand">
 <% @brands.each do |brand| %>
+<div class="brand-logo">
 <% if brand.image %>
 <%= image_tag brand.image, :class => 'thumb' %>
 <% end %>
-<ul>
-  <li>Name: <%= link_to brand.name, brand_path(brand.id) %></li>
-</ul>
+</div>
+<div class="brand-name" >
+  <li>  <%= link_to brand.name, brand_path(brand.id), :class=> "name" %></li>
+</div>
+<div class="brand-temp"></div>
 <% end %>
+</div>
