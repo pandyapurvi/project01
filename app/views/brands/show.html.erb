@@ -8,12 +8,15 @@
 <ul>
   <li>Name: <%= @brand.name %></li>
 </ul>
-
+<div class="grid-container">
 <% @brand.cars.each do |car| %>
+ <div class="grid-item">
 <%= link_to image_tag(car.image, :class =>'car-image-brand'), car_path(car.id) %>
-<%= link_to car.name, car_path(car.id), :class => "brand-car" %>
+<br><br><br>
+<%= link_to car.name, car_path(car.id) %>
+</div>
 <% end %>
-
+</div>
 <div class="controls">
   <% if @current_user.admin? %>
   <%= link_to 'Edit Brand', edit_brand_path(@brand.id) %>

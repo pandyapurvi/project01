@@ -20,7 +20,7 @@
   <% end %>
   <% end %>
 </ul>
-
+<%= link_to 'Add review', new_review_path %>
 <div class="controls">
   <% if @current_user.admin? %>
   <%= link_to 'Edit Car', edit_car_path(@car.id) %>
