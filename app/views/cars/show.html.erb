@@ -1,7 +1,8 @@
-<div class="container">
+<div class="grid-container">
 <h1><%= @car.name %></h1>
+<div class="grid-list">
 <%= image_tag @car.image, :alt => @car.name, :class => 'feature' %>
-
+</div>
 <ul>
   <div class="container-a">
   <li>Name: <%= @car.name %></li>
@@ -35,6 +36,7 @@
   <% end %>
   </div>
   <% end %>
+  </div>
 </ul>
 <%= link_to 'Add review', new_review_path, :class=>"link-name review" %>
 <div class="controls">
@@ -42,5 +44,4 @@
   <%= link_to 'Edit Car', edit_car_path(@car.id) %>
   <%= link_to 'Delete Car', car_path(@car.id), :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
   <% end %>
-</div>
 </div>
