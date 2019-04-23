@@ -1,17 +1,16 @@
-<div class="car-model">
-<h1>Models of the cars</h1>
+
+<h1>Models Of The Cars</h1>
 
 <% @models.each do |model| %>
-<div class="brand-logo">
+<div class="grid-container">
 <% if model.image %>
 <%= image_tag model.image, :class => 'model-thumb' %>
 <% end %>
 </div>
 <ul>
-  <div class="model-name" >
-  <li> <%= link_to model.name, model_path(model.id), :class => "model" %></li>
+  <div class="grid-item" >
+  <li> <%= link_to model.name, model_path(model.id), :class => "link-name" %></li>
 </ul>
 </div>
-<div class="brand-temp"></div>
+
 <% end %>
-</div>

@@ -1,29 +1,46 @@
+<div class="container">
 <h1><%= @car.name %></h1>
 <%= image_tag @car.image, :alt => @car.name, :class => 'feature' %>
 
 <ul>
+  <div class="container-a">
   <li>Name: <%= @car.name %></li>
+  <li>Seat: &nbsp<%= @car.seat %></li>
   <% if @car.brand.present? %>
+  <div class="grid-list">
   <li>Brand: <%= link_to @car.brand.name, brand_path(@car.brand) %></li>
+
   <% end %>
   <% if @car.model.present? %>
-  <li>Model: <%= link_to @car.model.name, model_path(@car.model) %></li>
-  <% end %>
-  <li>Seat: <%= @car.seat %></li>
-  <li>Price: <%= @car.price %></li>
-  <% if @car.reviews.present? %>
-  <h3>Reviews for this car</h3>
-  <% @car.reviews.each do |r| %>
 
-  <p>Rating: <%= link_to r.rating, reviews_path(@car) %> UserName: <%= link_to r.username, reviews_path(@car) %></p>
-  <p><%= link_to r.comment, reviews_path(@car) %></p>
+  <li>Model: <%= link_to @car.model.name, model_path(@car.model) %></li>
+
   <% end %>
+
+
+  <li>Price: <%= @car.price %></li>
+  </div>
+  </div>
+  <div class="container-b">
+  <% if @car.reviews.present? %>
+
+  <h3>Reviews For This Car</h3>
+
+  <% @car.reviews.each do |r| %>
+  <div class="flex-item">
+  <p>UserName: <%= link_to r.username, reviews_path(@car) %></p>
+  <p>Rating: <%= link_to r.rating, reviews_path(@car) %> </p>
+  <p>Review: <%= link_to r.comment, reviews_path(@car) %></p>
+  </div>
+  <% end %>
+  </div>
   <% end %>
 </ul>
-<%= link_to 'Add review', new_review_path %>
+<%= link_to 'Add review', new_review_path, :class=>"link-name review" %>
 <div class="controls">
   <% if @current_user.admin? %>
   <%= link_to 'Edit Car', edit_car_path(@car.id) %>
   <%= link_to 'Delete Car', car_path(@car.id), :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
   <% end %>
+</div>
 </div>

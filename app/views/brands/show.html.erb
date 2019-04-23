@@ -13,7 +13,7 @@
  <div class="grid-item">
 <%= link_to image_tag(car.image, :class =>'car-image-brand'), car_path(car.id) %>
 <br><br><br>
-<%= link_to car.name, car_path(car.id) %>
+<%= link_to car.name, car_path(car.id), :class=> "link-name" %>
 </div>
 <% end %>
 </div>

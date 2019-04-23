@@ -4,12 +4,15 @@
   <li>Name: <%= @model.name %></li>
 
 </ul>
-
+<div class="grid-container">
 <% @model.cars.each do |car| %>
-<%= link_to image_tag(car.image, :class =>'thumb'), car_path(car.id) %>
-<%= link_to car.name, car_path(car.id) %>
+<div class="grid-item">
+<%= link_to image_tag(car.image, :class =>'model-thumb'), car_path(car.id) %>
+<br><br><br>
+<%= link_to car.name, car_path(car.id), :class => "link-name" %>
+</div>
 <% end %>
-
+</div>
 <div class="controls">
   <% if @current_user.admin? %>
   <%= link_to 'Edit Model', edit_model_path(@model.id) %>

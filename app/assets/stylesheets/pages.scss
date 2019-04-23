@@ -30,6 +30,8 @@ body{
   background-size: cover;
   background-position: top;
   position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 
   // clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
@@ -174,25 +176,33 @@ animation-timing-function: ease-out;
 
 
 }
-// .header {
-//   background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/55/82/86579d751e8a73c.jpg');
-//   background-size: cover;
-//   height: 95vh;
-//   background-position: top;
-//   // clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-// }
 
 .btn-blue {
-  background-color: rgb(5, 97, 110);
+  background:linear-gradient(to bottom, #003399 0%, #66ccff 100%);
   padding: 1.5rem 4rem;
   display: inline-block;
   margin-top: 2rem;
-  text-transform: uppercase;
   font-size: 1.7rem;
   font-weight: 500;
-  // border-radius:
   transition: all .2s;
   position: relative;
   border: #05616E ;
+  color: #fff;
 
+}
+.link:link,
+.link:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 2rem;
+}
+.link:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 1rem 1rem 0  #66ccff;
+  transform: matrix(3%);
 }
