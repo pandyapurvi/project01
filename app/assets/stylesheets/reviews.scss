@@ -1,3 +1,16 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-page{
+  // display: block;
+  font-size: 2rem;
+}
+.user-review{
+  display: block;
+  text-align: center;
+  position:relative;
+  width: 30vw;
+  padding: .5rem;
+  font-size: 1.3rem;
+}

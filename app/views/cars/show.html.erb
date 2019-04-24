@@ -30,8 +30,8 @@
   <% @car.reviews.each do |r| %>
   <div class="flex-item">
   <p>UserName: <%= link_to r.username, reviews_path(@car) %></p>
-  <p>Rating: <%= link_to r.rating, reviews_path(@car) %> </p>
-  <p>Review: <%= link_to r.comment, reviews_path(@car) %></p>
+  <p>Rating: <%= link_to r.rating, reviews_path(@car) %> </p><i class="fa fa-star-o"></i>
+  <p>Comment: <%= link_to r.comment, reviews_path(@car) %></p>
   </div>
   <% end %>
   </div>

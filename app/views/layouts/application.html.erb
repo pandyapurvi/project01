@@ -18,7 +18,7 @@
 
   <% if @current_user.present? %>
   <% if @current_user.admin? %>
-  <%= link_to "All user", users_path %>
+  <%= link_to "All user", users_path,:class => "link btn-blue" %>
   <% end %>
   <%= link_to "Sign Out, #{ @current_user.email}", login_path, :method => 'delete', :class => "link btn-blue" %>
 
@@ -51,5 +51,7 @@
 
 
     <%= yield %>
+
+    
   </body>
 </html>
