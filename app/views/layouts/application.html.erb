@@ -22,7 +22,8 @@
   <% end %>
   <%= link_to "Sign Out, #{ @current_user.email}", login_path, :method => 'delete', :class => "link btn-blue" %>
 
-  <%= link_to 'BRANDS', brands_path, :class => "link btn-blue nav" %>
+  <%# <%= link_to 'BRANDS', brands_path, :class => "link btn-blue nav" %>
+  <%= select_tag 'BRANDS', options_from_collection_for_select(Brand.all, "id", "name"), :prompt => "BRANDS", :class => "link btn-blue", :onchange => brands_path  %>
   <%= link_to 'MODELS', models_path, :class => "link btn-blue"%>
   <%= link_to 'CARS', cars_path, :class => "link btn-blue" %>
 
@@ -52,6 +53,6 @@
 
     <%= yield %>
 
-    
+
   </body>
 </html>
