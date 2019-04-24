@@ -219,7 +219,7 @@ footer {
 
 }
 
-.whiteicon {
+.icon {
   max-width: 5vh;
   max-height: 5vh;
   display:inline-flex;
@@ -227,4 +227,27 @@ footer {
   padding-bottom: 1em;
   padding: 0;
   margin: 0 auto;
+}
+.para-footer {
+  font-size: 2rem;
+}
+
+.controls {
+  font-size: 2rem;
+}
+.welcome-img{
+  height: 50rem;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+.heading-welcome{
+  display: block;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function:ease-in;
+
 }

@@ -1,13 +1,20 @@
 <% if @current_user.present? %>
-<h2>Welcome Back  <%= @current_user.email %></h2>
+ <div class="text-box">
+<h1 class="heading-primary">
+    <span class="heading-welcome">Welcome Back  <%= @current_user.email %></span>
+
+</h1>
+
 <% end %>
+</div>
+<img src="https://image.freepik.com/free-photo/spotlight-shining-down-into-a-grunge-interior_1048-6921.jpg" alt="Car background" class="welcome-img">
 
 <footer>
-  <p>Created By Purvi Pandya</p>
-  <!-- <div class="whiteicon"> -->
+  <p class="para-footer"> Purvi Pandya @copy-2019</p>
+
     <a href="https://www.linkedin.com/in/pandyapurvi/">
-  <%= image_tag '/assets/linkedin.png', :class=> "whiteicon" %></a>
+  <%= image_tag '/assets/linkedin.png', :class=> "icon" %></a>
   <a href="https://github.com/pandyapurvi">
-  <%= image_tag '/assets/github.png', :class => "whiteicon"%></a>
-  <!-- </div> -->
+  <%= image_tag '/assets/github.png', :class => "icon"%></a>
+
 </footer>

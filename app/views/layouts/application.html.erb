@@ -4,6 +4,7 @@
     <title>Project01</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= cloudinary_js_config %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -64,8 +65,8 @@
            </div>
            <div class="text-box">
            <h1 class="heading-primary">
-               <span class="heading-primary-main">CarSales</span>
-               <span class="heading-primary-sub">Find your next car</span>
+               <span class="heading-primary-main">FindMeCar</span>
+               <span class="heading-primary-sub"> Find your dream car</span>
            </h1>
            <%= link_to 'Sign Up', new_user_path, :class => "btn btn-white btn-animation" %>
              <%= link_to 'Sign In',login_path, :class => "btn btn-white btn-animation"  %>
