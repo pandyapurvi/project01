@@ -206,3 +206,25 @@ animation-timing-function: ease-out;
   box-shadow: 1rem 1rem 0  #66ccff;
   transform: matrix(3%);
 }
+
+footer {
+  background-color: rgba(211, 211, 211, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 13vh;
+  text-align: center;
+
+}
+
+.whiteicon {
+  max-width: 5vh;
+  max-height: 5vh;
+  display:inline-flex;
+  align-items: center;
+  padding-bottom: 1em;
+  padding: 0;
+  margin: 0 auto;
+}

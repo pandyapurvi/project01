@@ -1,3 +1,13 @@
 <% if @current_user.present? %>
 <h2>Welcome Back  <%= @current_user.email %></h2>
 <% end %>
+
+<footer>
+  <p>Created By Purvi Pandya</p>
+  <!-- <div class="whiteicon"> -->
+    <a href="https://www.linkedin.com/in/pandyapurvi/">
+  <%= image_tag '/assets/linkedin.png', :class=> "whiteicon" %></a>
+  <a href="https://github.com/pandyapurvi">
+  <%= image_tag '/assets/github.png', :class => "whiteicon"%></a>
+  <!-- </div> -->
+</footer>
