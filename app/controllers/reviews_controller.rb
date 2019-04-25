@@ -16,7 +16,7 @@ end
 
     review = Review.create review_params
     @current_user.reviews << review
-    redirect_to car_path params[:id]
+    redirect_to reviews_path
   end
 
   # def create
