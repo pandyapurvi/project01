@@ -10,11 +10,6 @@
 
 <%= f.label :rating %>
 <%= f.number_field :rating,:class=>"user-review", :min => "1", :max => "5" %>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
 
 <%= f.label :car_id %>
 <%= f.select :car_id, Car.pluck(:name,:id),:include_blank => true %>

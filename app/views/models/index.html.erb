@@ -6,11 +6,13 @@
 <% if model.image %>
 <%= image_tag model.image, :class => 'model-thumb' %>
 <% end %>
-</div>
+
 <ul>
-  <div class="grid-item" >
+  <div class="grid-item">
   <li> <%= link_to model.name, model_path(model.id), :class => "link-name" %></li>
+  <br><hr>
 </ul>
+</div>
 </div>
 
 <% end %>

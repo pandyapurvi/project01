@@ -12,6 +12,9 @@
 html {
   font-size: 62.5%;
 }
+li{
+  text-decoration: none;
+}
 body{
   font-weight: 400;
    // font-size: 16px;
@@ -73,8 +76,6 @@ letter-spacing: 3.5rem;
 animation-name: moveInLeft;
 animation-duration: 1.5s;
 animation-timing-function: ease-out;
-/* animation-iteration-count: 3; */
-/* animation-delay: 3s; */
 }
 .heading-primary-sub{
 display: block;

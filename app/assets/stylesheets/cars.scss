@@ -12,10 +12,6 @@
 }
 
 .grid-item {
-  // grid-column-start: 2;
-  // grid-column-end: five;
-  // grid-row-start: row1-start;
-  // grid-row-end: 3;
   padding: 3rem;
   text-align: center;
 }
@@ -52,10 +48,7 @@
   height: 30rem;
 }
 .grid-brand {
-  // grid-column-start: 2;
-  // grid-column-end: five;
-  // grid-row-start: row1-start;
-  // grid-row-end: 3;
+
   padding: 1rem;
   text-align: center;
 }
@@ -67,9 +60,7 @@ h3{
 }
 
 .container-b{
-  // width: 40%;
-  // background-color: yellow;
-  // float:right;
+
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -81,4 +72,29 @@ h3{
 .star{
   float: right;
   color: orange;
+}
+
+.remove-link{
+  text-decoration: none;
+  color: #000;
+
+}
+.comment{
+  display: block;
+  background-color:#fff;
+  border: .1rem solid #777;
+  border-radius: .3rem;
+  padding: 1rem;
+
+  height: auto;
+  clear: both;
+  font-size: 1.5rem;
+}
+.username{
+  float: left;
+}
+.link-none{
+  text-decoration: none;
+  color: #000;
+
 }

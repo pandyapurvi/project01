@@ -9,19 +9,19 @@
   <li class="car">Seat: &nbsp<%= @car.seat %></li>
   <% if @car.brand.present? %>
   <div class="grid-list">
-  <li class="car">Brand: <%= link_to @car.brand.name, brand_path(@car.brand) %></li>
+  <li class="car">Brand: <%= link_to @car.brand.name, brand_path(@car.brand), :class=>"link-none" %></li>
 
   <% end %>
   <% if @car.model.present? %>
 
-  <li class="car">Model: <%= link_to @car.model.name, model_path(@car.model) %></li>
+  <li class="car">Model: <%= link_to @car.model.name, model_path(@car.model),:class=>"link-none" %></li>
 
   <% end %>
 
 
   <li class="car">Price: <%= @car.price %></li>
   </div>
-  </div>
+
   <div class="container-b">
   <% if @car.reviews.present? %>
 
@@ -29,19 +29,28 @@
 
   <% @car.reviews.each do |r| %>
   <div class="flex-item">
-  <p>UserName: <%= link_to r.username, reviews_path(@car) %></p>
+  <p class="username">UserName: <%= link_to r.username, reviews_path(@car), :class=>"link-none" %></p>
   <!-- <p>Rating: <%= link_to r.rating, reviews_path(@car) %> </p> -->
   <% (1 .. r.rating).each do |rating| %>
   <span class="fa fa-star star"></span>
   <% end %>
-  <p>Comment: <%= link_to r.comment, reviews_path(@car) %></p>
+  <div class="comment">
+  <p><%= link_to r.comment, reviews_path(@car), :class=>"remove-link" %></p>
+  </div>
+  <br>
   </div>
   <% end %>
   </div>
   <% end %>
   </div>
 </ul>
-<%= link_to 'Add review', new_review_path, :class=>"link-name review" %>
+
+<div class="review-page">
+<%= link_to 'Add review', new_review_path, :class=>"review" %>
+</div>
+
+
+
 <div class="controls">
   <% if @current_user.admin? %>
   <%= link_to 'Edit Car', edit_car_path(@car.id) %>

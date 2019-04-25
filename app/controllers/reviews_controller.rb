@@ -5,18 +5,27 @@ def index
 end
   def new
     @review = Review.new
+
   end
 
   def show
     @review = Review.find params[:id]
+
   end
   def create
 
     review = Review.create review_params
     @current_user.reviews << review
-    redirect_to reviews_path
+    redirect_to car_path params[:id]
   end
 
+  # def create
+  #     review = Review.create review_params
+  #     @current_user.reviews << review
+  #     car = Car.find params[:id]
+  #     car.reviews << review
+  #     redirect_to car
+  #   end
 
   private
   def review_params

@@ -10,10 +10,11 @@ b4 = Brand.create(:name => 'Ferrari', :image => 'https://worldsportlogos.com/wp-
 b5 = Brand.create(:name => 'Mazda', :image => 'https://images-na.ssl-images-amazon.com/images/I/718vwiv9QlL._SX466_.jpg')
 
 Model.destroy_all
-m1 = Model.create(:name => 'Sedan', :size => 'M', :drive => '2WD',:image => 'https://thumbs.dreamstime.com/z/car-vector-icon-isolated-simple-side-car-logo-illustration-eps-car-vector-icon-isolated-simple-side-car-logo-illustration-118017245.jpg')
+m1 = Model.create(:name => 'Sedan', :size => 'M', :drive => '2WD',:image => 'https://s3.amazonaws.com/peoplepng/wp-content/uploads/2018/10/30165942/Sedan.png')
 m2 = Model.create(:name => 'HatchBack', :size => 'S', :drive => '2WD',:image => 'http://freevector.co/wp-content/uploads/2009/02/55308-car-of-hatchback-model.png')
 m3 = Model.create(:name => 'SUV', :size => 'L', :drive => '4WD',:image => 'https://cdn4.iconfinder.com/data/icons/car-silhouettes/1000/SUV-512.png')
-m4 = Model.create(:name => 'Sports', :size => 'M', :drive => '4WD',:image => 'https://banner2.kisspng.com/20180224/rye/kisspng-sports-car-logo-auto-racing-vector-sports-car-car-wire-frame-png-picture-5a90fc321336a5.2878361915194511860787.jpg')
+m4 = Model.create(:name => 'Sports', :size => 'M', :drive => '4WD',:image => 'https://d1yn1kh78jj1rr.cloudfront.net/image/preview/NQgp2HWDx/storyblocks-outline-sport-car-symbol-silhouette-business-company-vector-logo_reI3IBGkz_SB_PM.jpg')
+
 
 Car.destroy_all
 c1 = Car.create(:name => 'Jazz', :image => 'https://auto.ndtvimg.com/car-images/big/honda/jazz/honda-jazz.jpg?v=29', :seat => 5,:price => '21000 AUD')
