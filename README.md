@@ -36,14 +36,14 @@ Sources
 + Carsales site as a reference
 
 ## Wish to add more things
---------------------
+
 + API and few gems
 + Advance CSS
 + Want to use foundation framwork for fron-end part
 + Can add more feature to application like comparision between cars, can provide link for best dealer of the user selected car.
 
 ## Bugs
-------------
+
 + It is not 100% responsive
 + Not keeping rating below car.
 + Not taking user name directly from login into review section
