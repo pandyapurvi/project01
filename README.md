@@ -1,6 +1,6 @@
 # Project 1
 ==========================
-## Find Me a Car.com
+## Find Me Car.com
 ==========================
 
 This is a very simple and basic Ruby application using Rails application.
