@@ -12,11 +12,11 @@ This is a very simple and basic Ruby application using Rails application.
 1.[Visit My Link Here:)](https://car-application.herokuapp.com)
 
 2.This is how my landing page look like.
-![Landing Page of app]("app/assets/images/landingpage.png")
+![Landing Page of app](app/assets/images/landingpage.png)
 
 3.If you are new to my app then go to 'Sign Up' tab, it won't take more than a minute and if you are a user then go to 'Sign In" tab.
 Welcome to my application.
-![Login page of the app](loginpage.pgn?raw=true "Login page")
+![Login page of the app](app/assets/images/loginpage.png?raw=true "Login page")
 
 4.As mentioned in the intro you can go and fid your dream car in a very simple steps.
 
