@@ -4,22 +4,22 @@
 <%= image_tag @car.image, :alt => @car.name, :class => 'feature' %>
 </div>
 <ul>
-  <div class="container-a">
-  <li>Name: <%= @car.name %></li>
-  <li>Seat: &nbsp<%= @car.seat %></li>
+  <div class="container-car">
+  <!-- <li>Name: <%= @car.name %></li> -->
+  <li class="car">Seat: &nbsp<%= @car.seat %></li>
   <% if @car.brand.present? %>
   <div class="grid-list">
-  <li>Brand: <%= link_to @car.brand.name, brand_path(@car.brand) %></li>
+  <li class="car">Brand: <%= link_to @car.brand.name, brand_path(@car.brand) %></li>
 
   <% end %>
   <% if @car.model.present? %>
 
-  <li>Model: <%= link_to @car.model.name, model_path(@car.model) %></li>
+  <li class="car">Model: <%= link_to @car.model.name, model_path(@car.model) %></li>
 
   <% end %>
 
 
-  <li>Price: <%= @car.price %></li>
+  <li class="car">Price: <%= @car.price %></li>
   </div>
   </div>
   <div class="container-b">
@@ -30,7 +30,10 @@
   <% @car.reviews.each do |r| %>
   <div class="flex-item">
   <p>UserName: <%= link_to r.username, reviews_path(@car) %></p>
-  <p>Rating: <%= link_to r.rating, reviews_path(@car) %> </p><i class="fa fa-star-o"></i>
+  <!-- <p>Rating: <%= link_to r.rating, reviews_path(@car) %> </p> -->
+  <% (1 .. r.rating).each do |rating| %>
+  <span class="fa fa-star star"></span>
+  <% end %>
   <p>Comment: <%= link_to r.comment, reviews_path(@car) %></p>
   </div>
   <% end %>

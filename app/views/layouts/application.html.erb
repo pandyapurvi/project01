@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= cloudinary_js_config %>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -15,16 +15,18 @@
   <nav class="login">
     <header class="header">
   <div class="welcome">
-  <%= link_to image_tag("h1"), root_path, :class => "home-logo" %>
 
+</nav>
   <% if @current_user.present? %>
   <% if @current_user.admin? %>
+
   <%= link_to "All user", users_path,:class => "link btn-blue" %>
   <% end %>
+  <%= link_to 'HOME', root_path, :class => "link btn-blue" %>
   <%= link_to "Sign Out, #{ @current_user.email}", login_path, :method => 'delete', :class => "link btn-blue" %>
 
-  <%# <%= link_to 'BRANDS', brands_path, :class => "link btn-blue nav" %>
-  <%= select_tag 'BRANDS', options_from_collection_for_select(Brand.all, "id", "name"), :prompt => "BRANDS", :class => "link btn-blue"  %>
+  <%= link_to 'BRANDS', brands_path, :class => "link btn-blue nav"%>
+  <%# <%= select_tag 'BRANDS', options_from_collection_for_select(Brand.all, "id", "name"), :prompt => "BRANDS", :class => "select-tag btn-blue"  %>
   <script>
     const navigate = function () {
       const brandID = this.value;
@@ -35,8 +37,8 @@
     document.querySelector('#BRANDS').addEventListener('change', navigate);
 
   </script>
-  <%# <%= link_to 'MODELS', models_path, :class => "link btn-blue"%>
-  <%= select_tag 'MODELS', options_from_collection_for_select(Model.all, "id", "name"), :prompt => "MODELS", :class => "link btn-blue" %>
+  <%= link_to 'MODELS', models_path, :class => "link btn-blue"%>
+  <%# <%= select_tag 'MODELS', options_from_collection_for_select(Model.all, "id", "name"), :prompt => "MODELS", :class => "link btn-blue" %>
   <script>
     const modelNav = function () {
       const modelID = this.value;
@@ -44,8 +46,8 @@
     };
     document.querySelector('#MODELS').addEventListener('change', modelNav);
   </script>
-  <%# <%= link_to 'CARS', cars_path, :class => "link btn-blue" %>
-  <%= select_tag 'CARS', options_from_collection_for_select(Car.all, "id", "name"), :prompt => "CARS", :class => "link btn-blue" %>
+  <%= link_to 'CARS', cars_path, :class => "link btn-blue"%>
+  <%# <%= select_tag 'CARS', options_from_collection_for_select(Car.all, "id", "name"), :prompt => "CARS", :class => "link btn-blue" %>
   <script>
     const carNav = function () {
       const carID = this.value;
@@ -54,9 +56,6 @@
     document.querySelector('#CARS').addEventListener('change', carNav);
   </script>
 
-
-  </div>
-  </header>
 
   <% else %>
   <div class="home">
@@ -75,7 +74,8 @@
 
   <% end  %>
 
-</nav>
+
+
 
 
     <%= yield %>

@@ -6,10 +6,10 @@
   <li>Car: <%= link_to @review.car.name, car_path(@review.car) %></li>
   <% end %>
   <% if @review.user.present? %>
-  <li>User: <%= link_to @review.user.name, user_path(@review.user) %></li>
+  <li>UserName: <%= link_to @review.user.name, user_path(@review.user) %></li>
   <% end %>
   <li>Comment: <%= @review.comment %></li>
-  <li>Rating: <%= @car.rating %></li><i class="fa fa-star-o"></i>
+  <li>Rating: <%= @car.rating %></li>
 </ul>
 
 <div class="controls">

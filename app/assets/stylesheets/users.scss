@@ -4,34 +4,34 @@
 
 .sign {
   postion: relative;
-  // max-width: 500px;
   color: black;
   text-align: center;
   display: block;
-  margin-top: 20vh;
+  // margin-top: 20vh;
 
 }
 .text-box1 {
   position: absolute;
-  // background-color: rgba(107, 178, 152, 0.6);
-  // margin: 0 auto;
   left:50%;
-  top: 100%;
+  top: 70%;
   transform: translate(-50% ,-50%);
   text-align: center;
-  // margin-top: 20px;
   display: block;
   color: orange;
   font-size: 1.9rem;
 }
 .message {
   position: absolute;
-  top: 70%;
+  top: 40%;
   left: 50%;
   transform: translate(-50% ,-50%);
-  background-color: red;
-  color: #fff;
 
+  color: red;
+
+}
+.msg{
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .email{
   display: block;
@@ -73,7 +73,8 @@ border: orange;
 .sign_in{
   display: block;
   width: 30vw;
-  font-size: 2rem;
+  font-size:2rem;
+
 }
 h2 {
   display: block;
@@ -85,4 +86,15 @@ h2 {
   animation-timing-function: ease-out;
   color: red;
   text-align: center;
+}
+.heading-user{
+  margin-top: -150%;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #fff;
+}
+.user-para{
+  color: #fff;
+  font-size: 2rem;
+
 }

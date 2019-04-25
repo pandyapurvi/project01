@@ -1,5 +1,5 @@
 <% if @current_user.present? %>
- <div class="text-box">
+ <div class="text-welcome">
 <h1 class="heading-primary">
     <span class="heading-welcome">Welcome Back  <%= @current_user.email %></span>
 
@@ -11,10 +11,10 @@
 
 <footer>
   <p class="para-footer"> Purvi Pandya @copy-2019</p>
-
+    <!-- <div class="footer-self"> -->
     <a href="https://www.linkedin.com/in/pandyapurvi/">
   <%= image_tag '/assets/linkedin.png', :class=> "icon" %></a>
   <a href="https://github.com/pandyapurvi">
   <%= image_tag '/assets/github.png', :class => "icon"%></a>
-
+    <!-- </div> -->
 </footer>

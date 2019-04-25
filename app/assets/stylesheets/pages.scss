@@ -24,16 +24,16 @@ body{
 
 
 .home{
-  height: 140vh;
-  width: 95vw;
+  height: 100vh;
+  width: 100vw;
   background-image:linear-gradient(to right bottom,rgba(0, 0, 0, 0.804), rgba(153, 153, 153, 0.6)) ,url('https://kasanovaonline.com/wp-content/uploads/2016/09/Lexus_LF_LC_Blue_001.jpg');
   background-size: cover;
   background-position: top;
   position: relative;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  margin: -3rem -3rem 0 -3rem;
 
-  // clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
 
 .logo-box {
@@ -51,7 +51,7 @@ body{
 
 .text-box{
     position: absolute;
-    top:20%;
+    top:10%;
     left:50%;
     transform: translate(-50% ,-50%);
     text-align: center;
@@ -71,7 +71,7 @@ font-weight: 400;
 letter-spacing: 3.5rem;
 
 animation-name: moveInLeft;
-animation-duration: 5s;
+animation-duration: 1.5s;
 animation-timing-function: ease-out;
 /* animation-iteration-count: 3; */
 /* animation-delay: 3s; */
@@ -82,7 +82,7 @@ font-size: 2rem;
 font-weight: 700;
 letter-spacing: 1.75rem;
 animation-name: moveInRight;
-animation-duration: 5s;
+animation-duration: 1.5s;
 animation-timing-function: ease-out;
 }
 @keyframes moveInLeft{
@@ -178,7 +178,7 @@ animation-timing-function: ease-out;
 }
 
 .btn-blue {
-  background:linear-gradient(to bottom, #003399 0%, #66ccff 100%);
+  background:linear-gradient(to bottom, #000 0%, #66ccff 100%);
   padding: 1.5rem 4rem;
   display: inline-block;
   margin-top: 2rem;
@@ -194,29 +194,35 @@ animation-timing-function: ease-out;
 .link:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1rem 2rem;
   display: inline-block;
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-top: -1.6rem;
 }
 .link:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 1rem 1rem 0  #66ccff;
+  // box-shadow: 1rem 1rem 0  #66ccff;
   transform: matrix(3%);
 }
 
 footer {
   background-color: rgba(211, 211, 211, 0.7);
-  position: fixed;
+  clear:both;
+  position:fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  height: 13vh;
+  width: 96%;
+  height: 9vh;
   text-align: center;
-
+  align: center;
+  margin-left: 2%;
+}
+.footer-self{
+  padding: 1rem;
 }
 
 .icon {
@@ -229,17 +235,29 @@ footer {
   margin: 0 auto;
 }
 .para-footer {
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+  padding-right: 2rem;
+  padding-top: .5rem;
 }
 
 .controls {
   font-size: 2rem;
 }
+.text-welcome{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+
+}
+
 .welcome-img{
-  height: 50rem;
+  height: 59.6rem;
   width: 100%;
   margin-top: 1rem;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .heading-welcome{
   display: block;

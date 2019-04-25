@@ -1,15 +1,15 @@
 <h2><%= @model.name %></h2>
 
-<ul>
+<!-- <ul>
   <li>Name: <%= @model.name %></li>
 
-</ul>
+</ul> -->
 <div class="grid-container">
 <% @model.cars.each do |car| %>
 <div class="grid-item">
 <%= link_to image_tag(car.image, :class =>'model-thumb'), car_path(car.id) %>
 <br><br><br>
-<%= link_to car.name, car_path(car.id), :class => "link btn-blue" %>
+<%= link_to car.name, car_path(car.id), :class => "link-name" %>
 </div>
 <% end %>
 </div>
