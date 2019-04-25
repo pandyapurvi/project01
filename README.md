@@ -1,7 +1,7 @@
 # Project 1
-==========================
+
 ## Find Me Car.com
-==========================
+
 
 This is a very simple and basic Ruby application using Rails application.
 **Ruby version is 2.6.2**
