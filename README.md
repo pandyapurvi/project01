@@ -9,7 +9,7 @@ This is a very simple and basic Ruby application using Rails application.
 
 ## Intro To Find Me Car.com 
 [Visit My Link Here:)](https://car-application.herokuapp.com)
-![Landing Page of app](landingpage.png?raw=true "Landing Page")
+![Landing Page of app](landingpage.png)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
