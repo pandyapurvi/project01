@@ -173,10 +173,7 @@ animation-timing-function: ease-out;
   animation: moveInButton .5s ease-out 3s;
   // animation-fill-mode: backwards;
 }
-.welcome{
 
-
-}
 
 .btn-blue {
   background:linear-gradient(to bottom, #000 0%, #66ccff 100%);
@@ -244,6 +241,7 @@ footer {
 
 .controls {
   font-size: 2rem;
+  margin-top: 2rem;
 }
 .text-welcome{
     position: absolute;

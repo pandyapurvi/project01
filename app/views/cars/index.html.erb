@@ -1,5 +1,8 @@
 <h1>Welcome To The World Of Cars</h1>
 
 <% @cars.each do |car| %>
-<%= link_to image_tag(car.image, :class => "car-image"), car_path(car.id) %>
+
+<%= link_to car.name, car_path(car.id), :class => " car-name" %>
+<%= link_to image_tag(car.image, :class => " grid-container car-index"), car_path(car.id) %>
+
 <% end %>

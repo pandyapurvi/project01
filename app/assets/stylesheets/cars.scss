@@ -4,8 +4,6 @@
 
 .grid-container {
   display: grid;
-  // grid-template-columns: 40px 50px auto 50px 40px;
-  // grid-template-rows: 25% 100px auto;
   grid-template-row: auto auto auto;
   grid-auto-rows: auto auto auto;
   justify-content: center;
@@ -14,6 +12,11 @@
 .grid-item {
   padding: 3rem;
   text-align: center;
+}
+.car-index{
+  width: 60%;
+  height: auto;
+  margin-left: 25rem;
 }
 .feature{
   max-width: 100%;
@@ -97,4 +100,28 @@ h3{
   text-decoration: none;
   color: #000;
 
+}
+.car-name:link,
+.car-name:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem 4rem;
+  display: inline-block;
+  // border-radius: 0 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 2rem;
+  border-style:double;
+  color: black;
+  border-radius: 50%;
+  width: 25rem;
+  margin-bottom: 3rem;
+  margin-left: 40%;
+  text-align: center;
+
+}
+.car-name:hover{
+  border-style: ridge;
+  background-color: #000;
+  color: #fff;
 }

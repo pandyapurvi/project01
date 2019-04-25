@@ -18,22 +18,22 @@ m4 = Model.create(:name => 'Sports', :size => 'M', :drive => '4WD',:image => 'ht
 
 Car.destroy_all
 c1 = Car.create(:name => 'Jazz', :image => 'https://auto.ndtvimg.com/car-images/big/honda/jazz/honda-jazz.jpg?v=29', :seat => 5,:price => '21000 AUD')
-c2 = Car.create(:name => 'CRV', :image => 'https://file.kbb.com/kbb/vehicleimage/evoxseo/xl/11813/2017-honda-cr-v-front-angle3_11813_089_480x360.jpg', :seat => 7,:price => '43000 AUD')
+c2 = Car.create(:name => 'CRV', :image => 'https://di-uploads-pod2.s3.amazonaws.com/middletownhonda/uploads/2015/11/2016-Honda-CR-V-comparison11.jpg', :seat => 7,:price => '43000 AUD')
 c3 = Car.create(:name => 'Golf', :image => 'https://res.cloudinary.com/carsguide/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_low/v1/editorial/golf75-png.png', :seat => 5,:price => '27000 AUD')
-c4 = Car.create(:name => 'Beetle', :image => 'https://res.cloudinary.com/carsguide/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/volkswagen-r-line-beetle.jpg', :seat => 4,:price => '45000 AUD')
-c5 = Car.create(:name => 'A3', :image => 'https://www.audi.ie/dam/nemo/models/a3/a3-limousine/my-2019/1920-stage/1920x600-AA3_L_161002_1-1920x1080.jpg', :seat => 5,:price => '48000 AUD')
-c6 = Car.create(:name => 'Q8', :image => 'https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/cars-car/image/2018/08/audi_q8_vorsprung_093.jpg?itok=i3lvHd3e', :seat => 7,:price => '95000 AUD')
-c7 = Car.create(:name => '458', :image => 'https://photos7.motorcar.com/used-2015-ferrari-458_italia-2drconvertible-1769-18567209-3-1024.jpg', :seat => 2,:price => '130,000 AUD')
-c8 = Car.create(:name => 'LA Ferrari', :image => 'https://icdn4.digitaltrends.com/image/20170828_150_render_livrea_02a_spyder-720x720.jpg', :seat => 2,:price => '1,500,000 AUD')
-c9 = Car.create(:name => '3', :image => 'https://carwow-uk-wp-3.imgix.net/10_Mazda3_5HB_EXT_10-1.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=750', :seat => 5,:price => '36000 AUD')
+c4 = Car.create(:name => 'Beetle', :image => 'https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/CAC30VWC251A121001.jpg', :seat => 4,:price => '45000 AUD')
+c5 = Car.create(:name => 'A3', :image => 'https://images.dealer.com/ddc/vehicles/2019/Audi/A3/Sedan/trim_20T_Premium_0866ec/color/Brilliant%20Black-A2A2-12%2C12%2C12-640-en_US.jpg?impolicy=resize&w=640', :seat => 5,:price => '48000 AUD')
+c6 = Car.create(:name => 'Q8', :image => 'https://cars.usnews.com/static/images/Auto/izmo/i106121433/2019_audi_q8_angularfront.jpg', :seat => 7,:price => '95000 AUD')
+c7 = Car.create(:name => '458', :image => 'https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/640x400/quality/80/https://s.aolcdn.com/commerce/autodata/images/USC30FRC151A021001.jpg', :seat => 2,:price => '130,000 AUD')
+c8 = Car.create(:name => 'LA Ferrari', :image => 'https://media.4rgos.it/i/Argos/5535202_R_Z001A?w=750&h=440&qlt=70', :seat => 2,:price => '1,500,000 AUD')
+c9 = Car.create(:name => '3', :image => 'https://images.dealer.com/ddc/vehicles/2018/Mazda/Mazda3/Hatchback/trim_Grand_Touring_0d658b/color/Jet%20Black%20Mica-41W-16%2C16%2C15-640-en_US.jpg', :seat => 5,:price => '36000 AUD')
 c10 = Car.create(:name => 'CX-9', :image => 'https://www.mazda.com.au/globalassets/settings/vehicle-assets/cx-9/2018-08---ipm/sport/maz13754_cx-9_sport_jet-black-mica_front_rgb.png', :seat => 7,:price => '67000 AUD')
 
 Review.destroy_all
-r1 = Review.create(:rating => 1, :comment => 'Bad car', :username => '123')
-r2 = Review.create(:rating => 2, :comment => 'Ok car', :username => '123')
-r3 = Review.create(:rating => 3, :comment => 'Average car', :username => '123')
-r4 = Review.create(:rating => 4, :comment => 'Good car', :username => '123')
-r5 = Review.create(:rating => 5, :comment => ' Must buy car', :username => '123')
+r1 = Review.create(:rating => 3, :comment => 'Ths is an amzing car with good milage and average. A perferct dream car for the person who is buying first time a new own car. It has lots of new feature and come with variety of colours. Must go and but this car. Discount is on till end of the month. Rush now.', :username => 'Shaun')
+r2 = Review.create(:rating => 4, :comment => 'Ths is an amzing car with good milage and average. A perferct dream car for the person who is buying first time a new own car. It has lots of new feature and come with variety of colours. Must go and but this car. Discount is on till end of the month. Rush now.', :username => 'Jenny')
+r3 = Review.create(:rating => 3, :comment => 'Ths is an amzing car with good milage and average. A perferct dream car for the person who is buying first time a new own car. It has lots of new feature and come with variety of colours. Must go and but this car. Discount is on till end of the month. Rush now.', :username => 'Ved')
+r4 = Review.create(:rating => 4, :comment => 'Ths is an amzing car with good milage and average. A perferct dream car for the person who is buying first time a new own car. It has lots of new feature and come with variety of colours. Must go and but this car. Discount is on till end of the month. Rush now.', :username => 'Ching')
+r5 = Review.create(:rating => 5, :comment => 'Ths is an amzing car with good milage and average. A perferct dream car for the person who is buying first time a new own car. It has lots of new feature and come with variety of colours. Must go and but this car. Discount is on till end of the month. Rush now.', :username => 'Laila')
 
 ########### Associations ##############
 #Brands and Cars

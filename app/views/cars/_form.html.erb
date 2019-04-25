@@ -1,4 +1,6 @@
+<div class="controls">
 <%= form_for @car do |f| %>
+
 <%= f.label :name %>
 <%= f.text_field :name %>
 <%= f.label :image %>
@@ -13,4 +15,5 @@
 <%= f.select :model_id, Model.pluck(:name,:id), :include_blank => true %>
 
 <%= f.submit %>
+</div>
 <% end %>
