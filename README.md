@@ -18,12 +18,12 @@ This is a very simple and basic Ruby application using Rails application.
 Welcome to my application.
 ![Login page of the app](app/assets/images/loginpage.png?raw=true "Login page")
 
-4.As mentioned in the intro you can go and fid your dream car in a very simple steps.
+4.As mentioned in the intro you can go and find your dream car in a very simple steps.
 
 Technologies Used
 =================
-+ HTML5
-+ CSS3
++ HTML
++ CSS
 + Ruby
 + Rails frame work
 + Commandline
