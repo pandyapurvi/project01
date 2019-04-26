@@ -4,8 +4,9 @@
 
 
 This is a very simple and basic Ruby application using Rails application.
-**Ruby version is 2.6.2**
-**Time-line was 5 days**
+**Ruby version is 2.6.2.**
+**Time-line given for this project was 5 days only.**
+
 **Intro:** This is a very simple car finder database. User can find a car by using Brands, Models, and car by itself. Brand shows all the car belogs to it including all kind of models, while Models show all cars belongs to that type of model and a car present specific information about this car. User can give rating as well as can write a commetn on particular car. Admin can have option to 'add/delete' and 'update' new car/brand/model information. Also admin can see the list of users in user tab.
 
 ## Intro To Find Me Car.com 
